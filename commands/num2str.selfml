@@ -1,0 +1,27 @@
+(trigger
+    (key [[ctrl]']))
+
+(name num2str)
+
+(only-in [(source.matlab|source.octave) - (string.quoted.single.matlab | comment.line.percentage.matlab | comment.double.percentage.matlab)])
+
+(input selection word)
+
+(output snippet)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+# Wrap the current word or selected text in num2str()
+# or insert " if there is no word
+
+seltext = ENV['TM_SELECTED_TEXT'].to_s 
+curword = ENV['TM_CURRENT_WORD'].to_s
+
+if !seltext.empty?
+	print "num2str(", seltext, ")"
+elsif  !curword.empty?
+	print "num2str(", curword, ")"
+else
+    print "\""
+end])

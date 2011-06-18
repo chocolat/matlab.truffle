@@ -1,0 +1,8 @@
+(name exp)
+
+(trigger
+    (tab e))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [exp(%{1}) %{2}])

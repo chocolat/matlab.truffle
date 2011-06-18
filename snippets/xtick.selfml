@@ -1,0 +1,8 @@
+(name xtick)
+
+(trigger
+    (tab xti))
+
+(only-in [source.matlab , source.octave])
+
+(snippet [set(gca,'XTick',%{1="[%{2}]"});])

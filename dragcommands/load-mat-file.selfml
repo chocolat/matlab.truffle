@@ -1,0 +1,15 @@
+(name [Load .mat File])
+
+(only-in [source.matlab, source.octave])
+
+(output snippet)
+
+(file-extensions mat fig)
+
+(save nothing)
+
+(script [if [[ -z "$TM_DIRECTORY" ]]
+	then filename=$TM_DROPPED_FILE
+	else filename=${TM_DROPPED_FILE#${TM_DIRECTORY}}
+fi
+echo "\${1:variable} = load('${filename}');"])

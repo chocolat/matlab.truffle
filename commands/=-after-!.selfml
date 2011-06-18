@@ -1,0 +1,20 @@
+(trigger
+    (key =))
+
+(name [= after !])
+
+(only-in variable.other.exclamation.matlab)
+
+(input selection line)
+
+(output snippet)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+# Replace != with ~= for the novice user
+line = ENV['TM_LINE_NUMBER'].to_i
+columns = ENV['TM_LINE_INDEX'].to_i-1
+textArray = STDIN.readlines
+print textArray.last. to_s.sub(/\!/,'~=')
+])

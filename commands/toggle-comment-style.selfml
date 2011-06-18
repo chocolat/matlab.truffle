@@ -1,0 +1,22 @@
+(trigger
+    (key [[shift][cmd]C]))
+
+(name [Toggle comment style])
+
+(only-in [source.matlab, source.octave])
+
+(input selection line)
+
+(output replace-selected)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+
+print case str = STDIN.read
+  when /\A(.*?)\%(.*)$/: $1 + '#' + $2  
+  when /\A(.*?)#(.*)$/: $1 + '%' + $2
+  # Default case
+  else str
+end
+])

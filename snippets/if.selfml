@@ -1,0 +1,14 @@
+(name [if … end])
+
+(trigger
+    (tab if))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [if %{1="condition"}
+	%{0}
+`if [[ $TM_USE_OCTAVE -ne '0' ]]
+	then echo "endif"
+else
+	echo "end"
+fi`])

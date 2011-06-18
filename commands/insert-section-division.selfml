@@ -1,0 +1,23 @@
+(trigger
+    (tab div))
+
+(name [Insert section division])
+
+(only-in [source.matlab, source.octave])
+
+(input nothing)
+
+(output snippet)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+
+width = 80
+buffer = 5
+
+print "%%${1/^" + "(.)?"*(width) + ".*$/"
+1.upto(width-2-buffer) { |i| print "(?#{i}::=)" }
+print "/}".ljust(buffer+2)
+print "${1:Header}" + "\n$0"
+])

@@ -1,0 +1,9 @@
+(name elseif)
+
+(trigger
+    (tab elseif))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [elseif %{1="condition"}
+	%{0}])

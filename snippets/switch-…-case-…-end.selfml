@@ -1,0 +1,15 @@
+(name [switch … case … end])
+
+(trigger
+    (tab switch))
+
+(only-in source.matlab)
+
+(snippet [switch %{1="var"}
+case %{2="'%{3=\"string\"}'"}
+	%{0}
+`if [[ $TM_USE_OCTAVE -ne '0' ]]
+	then echo "endswitch"
+else
+	echo "end"
+fi`])

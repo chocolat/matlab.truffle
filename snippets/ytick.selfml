@@ -1,0 +1,8 @@
+(name ytick)
+
+(trigger
+    (tab yti))
+
+(only-in [source.matlab , source.octave])
+
+(snippet [set(gca,'YTick',%{1="[%{2}]"});])

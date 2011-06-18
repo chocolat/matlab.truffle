@@ -1,0 +1,26 @@
+(trigger
+    (key [[ctrl][shift][cmd]C]))
+
+(name [Replace comments with default])
+
+(only-in [source.matlab, source.octave])
+
+(input document line)
+
+(output replace-all)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+
+input = STDIN.readlines
+
+input.each do |str|
+  puts case str
+  when /\A(.*?)#+\s*(.*)$/: $1 + ENV['TM_COMMENT_START'] + $2  
+  when /\A(.*?)%+\s*(.*)$/: $1 + ENV['TM_COMMENT_START'] + $2  
+  # Default case
+  else str
+  end
+end
+])

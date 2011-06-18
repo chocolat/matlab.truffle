@@ -1,0 +1,8 @@
+(name xlabel)
+
+(trigger
+    (tab xla))
+
+(only-in [source.matlab , source.octave])
+
+(snippet [set(get(gca,'XLabel'),'String',%{1="'%{2}'"});])

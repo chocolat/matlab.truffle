@@ -1,0 +1,10 @@
+(name [small function])
+
+(trigger
+    (tab func))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [%% %{1="functionname"}: %{2="function description"}
+function [%{3="outputs"}] = %{1}(%{4="arg"})
+%{3/,?\s*([a-zA-Z]\w*)|,\s*/(?1:\t$1 = ;\n)/g}])

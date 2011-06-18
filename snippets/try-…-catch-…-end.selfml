@@ -1,0 +1,16 @@
+(name [try … catch … end])
+
+(trigger
+    (tab try))
+
+(only-in source.matlab)
+
+(snippet [try 
+	%{1}
+catch 
+	%{0}
+`if [[ $TM_USE_OCTAVE -ne '0' ]]
+	then echo "end_try_catch"
+else
+	echo "end"
+fi`])

@@ -1,0 +1,8 @@
+(name ylabel)
+
+(trigger
+    (tab yla))
+
+(only-in [source.matlab , source.octave])
+
+(snippet [set(get(gca,'YLabel'),'String',%{1="'%{2}'"});])

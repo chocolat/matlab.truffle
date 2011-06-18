@@ -1,0 +1,8 @@
+(name griddata)
+
+(trigger
+    (tab griddata))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [griddata(%{1="xx"}, %{2="yy"}, %{3="zz"}, %{4="xi"}, %{5="yi"}); ])

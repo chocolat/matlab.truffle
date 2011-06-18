@@ -1,0 +1,15 @@
+(name [Read Image])
+
+(only-in [source.matlab, source.octave])
+
+(output snippet)
+
+(file-extensions bmp cur gif hdf ico jpg jpeg pbm pcx pgm png pnm ppm ras tif tiff xwd)
+
+(save nothing)
+
+(script [if [[ -z "$TM_DIRECTORY" ]]
+	then filename=$TM_DROPPED_FILE
+	else filename=${TM_DROPPED_FILE#${TM_DIRECTORY}}
+fi
+echo "\${1:image} = imread('${filename}');"])

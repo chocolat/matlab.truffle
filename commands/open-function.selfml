@@ -1,0 +1,20 @@
+(trigger
+    (key [[shift][cmd]O]))
+
+(name [Open Function])
+
+(only-in source.matlab)
+
+(input nothing)
+
+(output tooltip)
+
+(save nothing)
+
+(script [f=`find . "$HOME/matlab" /Applications/MATLAB* -name "${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}.m"|head -1`
+
+if [[ -e "$f" ]]
+  then open -a TextMate "$f"
+  else echo "File could not be found."
+fi
+])

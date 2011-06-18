@@ -1,0 +1,13 @@
+(name [switch ... case ... otherwise ... end])
+
+(trigger
+    (tab switch))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [switch %{1="switch_expression"}
+	case %{2="case_expression"}
+		%{3="body"}
+	otherwise
+		%{4="body"}
+end])

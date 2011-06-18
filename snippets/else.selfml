@@ -1,0 +1,9 @@
+(name else)
+
+(trigger
+    (tab else))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [else
+	%{1="body"}])

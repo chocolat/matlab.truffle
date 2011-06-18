@@ -1,0 +1,18 @@
+(trigger
+    (key [[ctrl]H]))
+
+(name [Function Documentation])
+
+(only-in source.matlab)
+
+(input selection word)
+
+(output html)
+
+(save nothing)
+
+(script [if grep <<<${TM_CURRENT_WORD:-!} -Esq '[a-zA-Z0-9_]+'
+	then exit_show_html "<meta http-equiv='Refresh' content='0;URL=http://www.mathworks.com/access/helpdesk/help/techdoc/index.html?/access/helpdesk/help/techdoc/ref/${TM_CURRENT_WORD}.html'>"
+	else echo "Nothing to lookup (hint: place the caret on a function name)"
+fi
+])

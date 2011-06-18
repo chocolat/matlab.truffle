@@ -1,0 +1,76 @@
+(folding
+    (start [^\s*(function|if|switch|while|for|try)\b(?!.*\b(end|endfunction|endif|endswitch|endwhile|endfor|endtry)\b).*$])
+    (stop [^\s*(end|return|endfunction|endif|endswitch|endwhile|endfor|endtry)\b.*$]))
+
+(in source.matlab
+    (pair "
+        "
+        (smart-typing)
+        (highlight))
+    (pair `[`
+        `]`
+        (smart-typing)
+        (highlight))
+    (pair '
+        '
+        (smart-typing))
+    (pair [(]
+        [)]
+        (smart-typing)
+        (highlight))
+    (pair [{]
+        [}]
+        (smart-typing)
+        (highlight))
+    (indentation.decrease [^\s*\b(end\w*|catch|else|elseif|case|otherwise)\b])
+    (indentation.increase [(?x)^\s*
+    \b(
+       function
+       |if|else|elseif
+       |switch|case|otherwise
+       |for|while
+	  |try|catch
+       |unwind_protect
+	)\b]))
+
+(pair "
+    "
+    (highlight))
+
+(pair `[`
+    `]`
+    (smart-typing)
+    (highlight))
+
+(pair [(]
+    [)]
+    (smart-typing)
+    (highlight))
+
+(pair [{]
+    [}]
+    (smart-typing)
+    (highlight))
+
+(indentation.decrease [^\s*(catch|else|elseif|end|endfunction|endif|endswitch|endwhile|endfor|endtry)\b])
+
+(indentation.increase [^\s*(catch|else|elseif|for|function|if|switch|while|try).*])
+
+(shell-variables
+    (TM_COMMENT_START [% ]))
+
+(comment.line [% ])
+
+(in [source.matlab, source.octave]
+    (shell-variables
+        (TM_USE_OCTAVE 0)
+        (TM_CLOSE_FUNCTIONS 1)
+        (TM_COMMENT_START [% ]))
+    (comment.line [% ]))
+
+(in [source.matlab meta.function.with-arguments, source.matlab meta.function.without-arguments]
+    (symbol-list
+        (transformation [
+	s/^\s*function\s+//;
+	s/(?>.*=)\s*//; # remove output args 
+    ])))

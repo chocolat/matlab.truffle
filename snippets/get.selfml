@@ -1,0 +1,8 @@
+(name get)
+
+(trigger
+    (tab get))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [get(%{1="gca"},'%{2="PropertyName"}');])

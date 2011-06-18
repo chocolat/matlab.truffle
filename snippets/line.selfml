@@ -1,0 +1,9 @@
+(name line)
+
+(trigger
+    (tab line))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [line(%{1="xvector"},%{2="yvector"}%{3=",'Color','%{4=\"b\"}','LineWidth',%{5=\"1\"},'LineStyle','%{6=\"-\"}'"})
+])

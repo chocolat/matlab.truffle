@@ -1,0 +1,9 @@
+(name dlmwrite)
+
+(trigger
+    (tab dlmwrite))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [dlmwrite('%{1="filename"}.dat', [%{2="variables"}], %{3="'%{4=\"delimiter\"}', '%{5=\"\\\\t\"}'"});
+%{0}])

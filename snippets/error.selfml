@@ -1,0 +1,8 @@
+(name error)
+
+(trigger
+    (tab error))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [error('%{1="Description"}');])

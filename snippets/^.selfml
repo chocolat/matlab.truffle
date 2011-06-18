@@ -1,0 +1,8 @@
+(name ^)
+
+(trigger
+    (tab ^))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [^(%{1}) %{2}])

@@ -1,0 +1,8 @@
+(name warning)
+
+(trigger
+    (tab war))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [warning(['%{1="Description"}']);])

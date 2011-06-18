@@ -1,0 +1,25 @@
+(trigger
+    (tab head))
+
+(name [Insert header comment])
+
+(only-in [source.matlab, source.octave])
+
+(input nothing)
+
+(output snippet)
+
+(save nothing)
+
+(script [#!/usr/bin/env ruby
+
+width = 80
+
+topbottom = "%%".ljust(width,"=") + "\n"
+
+print topbottom
+print "%%${1/^" + "(.)?"*(width-2) + ".*$/"
+1.upto(width-2) { |i| print "(?#{i}:: )" }
+print "/}${1:Header}" + "\n"
+print topbottom
+])

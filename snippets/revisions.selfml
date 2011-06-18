@@ -1,0 +1,8 @@
+(name Revisions)
+
+(trigger
+    (tab rev))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [%	Rev. by %{TM_FULLNAME} on `date +%Y-%m-%d`: %{1="Short description"}])

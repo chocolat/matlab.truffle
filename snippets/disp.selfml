@@ -1,0 +1,8 @@
+(name disp)
+
+(trigger
+    (tab disp))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [disp('%{1="Text"}');])

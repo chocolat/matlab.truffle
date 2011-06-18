@@ -1,0 +1,36 @@
+(trigger
+    (key [[enter]]))
+
+(name [Enter in String in Brackets Scope])
+
+(only-in [meta.brackets.matlab string.quoted.single.matlab])
+
+(input document)
+
+(output snippet)
+
+(save nothing)
+
+(script `#!/usr/bin/env ruby
+
+textarray = STDIN.readlines
+currentline = ENV['TM_LINE_NUMBER'].to_i
+numlines = textarray.size.to_i
+lineindex = ENV['TM_LINE_INDEX'].to_i
+thisline = ENV['TM_CURRENT_LINE']
+columns = ENV['TM_LINE_INDEX'].to_i
+if columns == 0 && thisline[0] == ?'
+    print "...\n"
+else
+    if thisline.slice(0...lineindex).slice(/\'+$/).to_s.length.modulo(2) == 0
+        # We must insert a quote
+        print "'"
+    end
+    if (textarray.size == currentline) && (textarray.last.length == lineindex)
+        # We're at the very end. If the last character is a quotation mark
+        # we'll not add a leading quote.
+        print " ...\n'$1']"
+    else
+        print " ...\n'"
+    end
+end`)

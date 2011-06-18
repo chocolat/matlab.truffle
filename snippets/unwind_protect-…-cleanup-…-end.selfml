@@ -1,0 +1,12 @@
+(name [unwind_protect … cleanup … end])
+
+(trigger
+    (tab unwind))
+
+(only-in source.matlab)
+
+(snippet [unwind_protect 
+	%{1}
+unwnd_protect_cleanup 
+	%{0}
+end_unwind_protect])

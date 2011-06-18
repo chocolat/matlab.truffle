@@ -1,0 +1,8 @@
+(name unix)
+
+(trigger
+    (tab uni))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [[%{1="s"},%{2="w"}] = unix('%{3="Unix commands"}');])

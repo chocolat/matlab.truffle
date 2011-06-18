@@ -1,0 +1,8 @@
+(name [Comment Divide])
+
+(trigger)
+
+(only-in [source.matlab, source.octave])
+
+(snippet [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %{1}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+])

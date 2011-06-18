@@ -1,0 +1,8 @@
+(name zlabel)
+
+(trigger
+    (tab zla))
+
+(only-in [source.matlab , source.octave])
+
+(snippet [set(get(gca,'ZLabel'),'String',%{1="'%{2}'"});])

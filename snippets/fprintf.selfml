@@ -1,0 +1,8 @@
+(name fprintf)
+
+(trigger
+    (tab fpr))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [fprintf(%{1="fid"}, '%{2="%s"}\n'%{2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}%{3}%{2/([^%]|%%)*(%.)?.*/(?2:\);)/}])

@@ -1,0 +1,8 @@
+(name sprintf)
+
+(trigger
+    (tab spr))
+
+(only-in [source.matlab, source.octave])
+
+(snippet [sprintf('%{1="%s"}\n'%{1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}%{2}%{1/([^%]|%%)*(%.)?.*/(?2:\);)/}])
