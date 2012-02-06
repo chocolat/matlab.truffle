@@ -6,7 +6,7 @@
 (only-in source.matlab)
 
 (snippet [switch %{1="var"}
-case %{2="'%{3=\"string\"}'"}
+case %{2="'%{3="string"}'"}
 	%{4}
 otherwise
 	%{0}

@@ -7,7 +7,7 @@
 
 (snippet [function %{1="Output variables"} = %{2="functionName"}(%{3="Input variables"})
 %{TM_COMMENT_START}	%{2/.*/\U$0/}   %{4="Short description"}
-%{TM_COMMENT_START}		[%{1/.*/\U$0/}] = %{2/.*/\U$0/}(%{6="%{3/.*/\\U$0/}"})
+%{TM_COMMENT_START}		[%{1/.*/\U$0/}] = %{2/.*/\U$0/}(%{6="%{3/.*/\U$0/}"})
 %{TM_COMMENT_START}
 %{TM_COMMENT_START}	%{5="Long description"}
 %{TM_COMMENT_START}	

@@ -22,11 +22,11 @@
 
 ## -*- texinfo -*-
 ## @deftypefn {Function File} {%{1="Outputs"} = } %{2="Function Name"} (%{3="Input Arguments)
-## %{4=\"Short Description\"}
+## %{4="Short Description"}
 ##
-## %{5=\"Long Description\"}
+## %{5="Long Description"}
 ##
-## @seealso{%{6=\"functions\"}"}
+## @seealso{%{6="functions"}"}
 ## @end deftypefn
 
 ## Author:  %{TM_FULLNAME}

@@ -5,4 +5,4 @@
 
 (only-in [source.matlab , source.octave])
 
-(snippet [set(%{1="get(%{2=\"gca\"},'%{3=\"PropertyName\"}')"},'%{4="PropertyName"}',%{5="PropertyValue"});])
+(snippet [set(%{1="get(%{2="gca"},'%{3="PropertyName"}')"},'%{4="PropertyName"}',%{5="PropertyValue"});])

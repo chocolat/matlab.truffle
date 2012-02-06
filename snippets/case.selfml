@@ -5,5 +5,5 @@
 
 (only-in [source.matlab, source.octave])
 
-(snippet [case %{2="'%{3=\"string\"}'"}
+(snippet [case %{2="'%{3="string"}'"}
 	%{0}])
