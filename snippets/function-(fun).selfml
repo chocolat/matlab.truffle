@@ -11,16 +11,16 @@
 %{TM_COMMENT_START}
 %{TM_COMMENT_START}	%{5="Long description"}
 %{TM_COMMENT_START}	
-%{TM_COMMENT_START}	Created by %{TM_FULLNAME} on `date +%Y-%m-%d`.
+%{TM_COMMENT_START}	Created by %{TM_FULLNAME} on %{`date +%Y-%m-%d`}.
 %{TM_COMMENT_START}	Copyright (c) %{TM_YEAR} %{TM_ORGANIZATION_NAME}. All rights reserved.
 
 %{0}
 
-`if [[ $TM_CLOSE_FUNCTIONS -ne '0' ]]
+%{`if [[ $TM_CLOSE_FUNCTIONS -ne '0' ]]
 	then
 	if [[ $TM_USE_OCTAVE -ne '0' ]]
 		then echo "endfunction"
 	else
 		echo "end $TM_COMMENT_START function" 
 	fi
-fi`])
+fi`}])

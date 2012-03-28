@@ -5,7 +5,7 @@
 
 (only-in [source.matlab, source.octave])
 
-(snippet [error(nargchk(%{1="min"}, %{2="max"}, %{3="nargin"}, `if [[ $TM_USE_OCTAVE -eq '0' ]]; then
+(snippet [error(nargchk(%{1="min"}, %{2="max"}, %{3="nargin"}, %{`if [[ $TM_USE_OCTAVE -eq '0' ]]; then
 	echo -n "'struct'"
-fi` ));
+fi`} ));
 ])

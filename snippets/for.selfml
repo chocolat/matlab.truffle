@@ -7,8 +7,8 @@
 
 (snippet [for %{1="ii"}=%{2="1"}%{3=":%{4="n"}"}
 	%{0}
-`if [[ $TM_USE_OCTAVE -ne '0' ]]
+%{`if [[ $TM_USE_OCTAVE -ne '0' ]]
 	then echo "endfor"
 else
 	echo "end"
-fi`])
+fi`}])
