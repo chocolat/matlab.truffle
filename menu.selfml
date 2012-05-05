@@ -1,9 +1,8 @@
 (menu
     (submenu Comments snippet.bsd snippet.gpl --- snippet.comment-divide command.insert-section-division command.insert-header-comment --- command.replace-comments-with-default command.toggle-comment-style)
-    (submenu Declarations command.create-table --- [snippet.function-(fun)] snippet.small-function --- snippet.if snippet.if-else snippet.if-elseif snippet.else snippet.elseif --- snippet.switch___case___otherwise___end snippet.case --- snippet.for snippet.while)
+    (submenu Declarations [snippet.function-(fun)] snippet.small-function --- snippet.if snippet.if-else snippet.if-elseif snippet.else snippet.elseif --- snippet.switch___case___otherwise___end snippet.case --- snippet.for snippet.while)
     (submenu Figures command.subplot --- snippet.line snippet.title --- snippet.get snippet.set --- snippet.xlabel snippet.ylabel snippet.zlabel --- snippet.xtick snippet.ytick)
-    (submenu Refactoring command.introduce-variable [command.introduce-variable-(throughout)])
-    (submenu Functions snippet.^ command.clear snippet.clear snippet.dlmwrite snippet.exp snippet.griddata snippet.unix command.save)
+    (submenu Functions snippet.^ snippet.clear snippet.dlmwrite snippet.exp snippet.griddata snippet.unix)
     (submenu [Text and Messages] snippet.revisions --- snippet.disp snippet.disp-sprintf --- snippet.fprintf snippet.sprintf command.num2str --- snippet.error snippet.warning --- snippet.nargchk)
     (submenu [↩ and ⌅ Commands] command.enter-in-incomplete-variable-assignment command.enter-in-double-comment command.enter-in-string-in-brackets command.enter-in-brackets-or-parens command.enter-in-string)
     command.open-function
